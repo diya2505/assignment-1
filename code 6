@@ -1,1 +1,94 @@
+class GeometricObject {
+    double s1 = 1, s2 = 1, s3 = 1;
+    double Perimeter = s1 + s2 + s3;
+    double P = Perimeter / 2.00;
+ 
+    double Area = Math.sqrt(P * (P - s1) * (P – s2) * (P - s3));
+ 
+}
+ 
+class Triangle extends GeometricObject {
+ 
+    Triangle() {
+        System.out.println("The Default Triangle : ");
+        System.out.println("Side1 : " + s1);
+        System.out.println("Side2 : " + s2);
+        System.out.println("Side3 : " + s3);
+        System.out.println("Area of Triange : " + Area);
+        System.out.println("Perimeter of Triange : " + Perimeter);
+    }
+    public void sets1(int s1) {
+        this.s1 = s1;
+    }
+ 
+    public double gets1() {
+        return s1;
+    }
+ 
+    public void sets2(int s2) {
+        this.s2 = s2;
+    }
+ 
+    public double gets2() {
+        return s2;
+    }
+ 
+    public void sets3(int s3) {
+        this.s3 = s3;
+    }
+ 
+    public double gets3() {
+        return s3;
+    }
+ 
+    public void getArea(double Area) {
+        this.Area = Area;
+    }
+ 
+    public double setArea() {
+        return Area;
+    }
+ 
+    public void getPerimeter(double Perimeter) {
+        this.Perimeter = Perimeter;
+    }
+ 
+    public double setPerimeter() {
+        return Perimeter;
+    }
+ 
+    void tostring() {
+        System.out.println("The Triangle Having 3 Sides : ");
+        System.out.println("Side1 : " + s1);
+        System.out.println("Side2 : " + s2);
+        System.out.println("Side3 : " + s3);
+        System.out.println("Area of Triange Is : " + Area);
+        System.out.println("Perimeter of Triange Is : " + Perimeter);
+    }
+ 
+    Triangle(double a, double b, double c) {
+        s1 = a;
+        s2 = b;
+        s3 = c;
+        double Perimeter = (a + b + c);
+        double P = Perimeter / 2.00;
+        double Area = Math.sqrt(P * (P - a) * (P - b) * (P - c));
+        System.out.println("The Specific Triangle : ");
+        System.out.println("The Triangle Having 3 Sides : ");
+        System.out.println("Side1 : " + a);
+        System.out.println("Side2 : " + b);
+        System.out.println("Side3 : " + c);
+        System.out.println("Area of Triange Is : " + Area);
+        System.out.println("Perimeter of Triange Is : " + Perimeter);
+    }
+ 
+}
+ 
+class code6 extends Triangle {
+    public static void main(String[] args) {
+        new Triangle();
+        new Triangle(10, 15, 20);
+ 
+    }
+}
 
